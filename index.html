@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list to tree</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>list2tree</h1>
+  </header>
+  <main>
+    <p id="desc">
+      リストをツリー（ディレクトリ形式）に変換するツールです。
+    </p>
+    <div id="app">
+      <div id="list">
+        <header id="list-header">
+          <div>List</div>
+        </header>
+        <div id="list-main">
+          list main
+        </div>
+      </div>
+      <div id="tree">
+        <header id="tree-header">
+          Tree
+        </header>
+        <pre id="tree-main">tree main</pre>
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/vue@3.0.5"></script>
+  <script src="./list2tree.js"></script>
+</body>
+</html>
