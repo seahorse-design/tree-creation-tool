@@ -20,18 +20,18 @@
           <div>List</div>
         </header>
         <div id="list-main">
-          list main
+            <div contenteditable="true" v-for="(item, index) in items" :key="item.id">list-main</div>
         </div>
       </div>
       <div id="tree">
         <header id="tree-header">
           Tree
         </header>
-        <pre id="tree-main">tree main</pre>
+        <pre id="tree-main">{{ tree }}</pre>
       </div>
     </div>
   </main>
   <script src="https://unpkg.com/vue@3.0.5"></script>
-  <script src="./list2tree.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

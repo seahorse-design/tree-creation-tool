@@ -46,3 +46,10 @@ p#desc {
   margin: 0;
   font-family: Consolas;
 }
+div[contenteditable] {
+    display: list-item;
+    outline: none;
+  }
+  div[contenteditable]:focus {
+    border: 1px solid #35495e;
+  }
