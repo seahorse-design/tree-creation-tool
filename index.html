@@ -20,7 +20,17 @@
           <div>List</div>
         </header>
         <div id="list-main">
-            <div contenteditable="true" v-for="(item, index) in items" :key="item.id">list-main</div>
+            <div contenteditable="true"
+                v-for="(item, index) in items"
+                :key=item.id
+                :style="{marginLeft:(item.indent * 20 + 20) + 'px'}"
+                :ref="el => {divs[item.id]=el}"
+                @input="onInput($event,item)"
+                @keydown.tab.exact.prevent="onTab(item, index)"
+                @keydown.tab.shift.prevent="onTabShift(item, index)"
+                @keydown.up.prevent="onUp(index)"
+                @keydown.down.prevent="onDown(index)"
+            >{{ item.value }}</div>
         </div>
       </div>
       <div id="tree">
