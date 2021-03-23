@@ -30,6 +30,7 @@
                 @keydown.tab.shift.prevent="onTabShift(item, index)"
                 @keydown.up.prevent="onUp(index)"
                 @keydown.down.prevent="onDown(index)"
+                @keydown.enter.prevent="onEnter(item,index)"
             >{{ item.value }}</div>
         </div>
       </div>
