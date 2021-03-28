@@ -18,6 +18,7 @@
       <div id="list">
         <header id="list-header">
           <div>List</div>
+          <div id="delete" @click="deleteList()">Ｘ</div>
         </header>
         <div id="list-main">
             <div contenteditable="true"
@@ -31,6 +32,7 @@
                 @keydown.up.prevent="onUp(index)"
                 @keydown.down.prevent="onDown(index)"
                 @keydown.enter.prevent="onEnter(item,index)"
+                @keydown.backspace="onBackspace(item,index)"
             >{{ item.value }}</div>
         </div>
       </div>
